@@ -1,0 +1,10 @@
+.grid-element {
+  
+  padding: 0.75rem;
+}
+
+.grid-content {
+  background-color: #283046;
+  border-radius: 5px;
+  padding: 1rem;
+}
