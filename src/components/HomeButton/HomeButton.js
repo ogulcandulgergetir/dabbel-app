@@ -7,8 +7,8 @@ import { Col } from 'react-bootstrap';
 
 function HomeButton({ md, index, toggleTodo }) {
   return (
-    <div  className="home-button">
-      <Button text="home" icon="feather:home"/>      
+    <div  className="home-button px-2">
+      <Button text="Home" icon="feather:home"/>      
     </div>
   );
 }

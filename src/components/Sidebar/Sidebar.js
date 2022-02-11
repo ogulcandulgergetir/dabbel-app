@@ -11,24 +11,24 @@ function Sidebar({ md, index, toggleTodo }) {
 
   const categoryOneButtons = [
     {
+      icon: "feather:mail",
+      buttonText: "Email"
+    },
+    {
+      icon: "feather:message-square",
+      buttonText: "Chat"
+    },
+    {
       icon: "feather:check-square",
-      buttonText: "buttonText"
+      buttonText: "Todo"
     },
     {
-      icon: "icon2",
-      buttonText: "buttonText2"
+      icon: "feather:calendar",
+      buttonText: "Calendar"
     },
     {
-      icon: "icon3",
-      buttonText: "buttonText3"
-    },
-    {
-      icon: "icon4",
-      buttonText: "buttonText4"
-    },
-    {
-      icon: "icon5",
-      buttonText: "buttonText5"
+      icon: "feather:shopping-cart",
+      buttonText: "eCommerce"
     },
   ]
   
@@ -48,10 +48,10 @@ function Sidebar({ md, index, toggleTodo }) {
   ]
 
   return (
-    <div md={md} className="sidebar d-none d-md-block p-3">
+    <div md={md} className="sidebar d-none d-md-block p-4">
       <HomeButton/>
-      <Category title="CATEOGORY1" categoryButtons={categoryOneButtons}/>
-      <Category title="CATEOGORY2"categoryButtons={categoryTwoButtons}/>
+      <Category title="CATEOGORY 1" categoryButtons={categoryOneButtons}/>
+      <Category title="CATEOGORY 2"categoryButtons={categoryTwoButtons}/>
     </div>
   );
 }
