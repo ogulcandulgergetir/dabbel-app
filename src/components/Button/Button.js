@@ -1,22 +1,15 @@
 import React from "react";
-import "./Todo.css";
+import "./Button.css";
+import { Col } from 'react-bootstrap';
 
-function Todo({ todo, index, toggleTodo }) {
+
+function Button({ text, icon, toggleTodo }) {
   return (
-    <div
-      className="todo"
-      style={{ backgroundColor: todo.completed ? "rgb(143, 143, 143)" : "rgb(224, 214, 231)",
-               color: todo.completed ? "rgb(90, 90, 90)" : "" }}
-    >
-      {todo.title}
-      <div>
-      {!todo.completed 
-        ? <button onClick={() => toggleTodo(index)}>Complete The Task</button>
-        : <button onClick={() => toggleTodo(index)}>Uncomplete</button>
-      }
-      </div>
+    <div  className="button m-3 d-flex align-items-center">
+      <span className="iconify" data-icon={icon} style={{display: "block", marginRight: "15px"}}></span>
+      <h6 className="mb-0">{text}</h6>
     </div>
   );
 }
 
-export default Todo;
+export default Button;

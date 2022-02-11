@@ -1,28 +1,20 @@
 import React from "react";
-import "./TodoForm.css";
+import "./Category.css";
+import Button from '../Button/Button'
 
-function TodoForm({ addTodo }) {
-  const [value, setValue] = React.useState("");
+import { Col } from 'react-bootstrap';
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (!value) return;
-    addTodo(value);
-    setValue("");
-  };
 
+function Category({ title, categoryButtons, toggleTodo }) {
+  console.log(categoryButtons)
   return (
-    <form onSubmit={handleSubmit}>
-      <span style={{ 'padding': "1rem", 'fontSize': "13px" }}>Add items to do list:</span>  
-      <input
-        type="text"
-        className="input"
-        value={value}
-        onChange={e => setValue(e.target.value)}
-      />
-      <input style={{ 'marginLeft': "0.5rem" }} type="submit" value="Add Item" />
-    </form>
+    <div  className="category mt-3">
+      <h2>{title}</h2>
+      {categoryButtons.map((element, idx) => {
+        return <Button text={element.buttonText} icon={element.icon} key={idx}/> 
+      })}     
+    </div>
   );
 }
 
-export default TodoForm;
+export default Category;
