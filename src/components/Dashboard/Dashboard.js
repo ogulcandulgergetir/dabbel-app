@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 
 
-function Dashboard() {
+function Dashboard( {cartItems}) {
 
   const toolbarButtonsLeft = [
     {
@@ -33,21 +33,34 @@ function Dashboard() {
   const toolbarButtonsRight = [
     {
       icon: "feather:search",
+      rightSide: true,
     },
     {
       icon: "feather:shopping-cart",
+      rightSide: true,
+      notificationText: "",
+      notificationBackgroundColor: "#7367f0",
+      notificationTextColor: "white",
     },
     {
       icon: "feather:bell",
+      rightSide: true,
     },
   ]
+
+  const userDetails = {
+      username: "Username",
+      status: "admin",
+    }
 
   return (
     <Col className="dashboard">
       <Container fluid className="px-0 d-flex justify-content-center h-100">
         <Row className="w-100">          
           <Grid toolbarButtonsLeft={toolbarButtonsLeft}
-                toolbarButtonsRight={toolbarButtonsRight}/>
+                toolbarButtonsRight={toolbarButtonsRight}
+                userDetails={userDetails}
+                cartItems={cartItems}/>
         </Row>
       </Container>
     </Col>

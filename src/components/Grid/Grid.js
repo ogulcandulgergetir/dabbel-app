@@ -6,12 +6,15 @@ import Toolbar from '../Toolbar/Toolbar'
 
 
 
-function Grid({ toolbarButtonsRight, toolbarButtonsLeft }) {
+function Grid({ toolbarButtonsRight, toolbarButtonsLeft, userDetails, cartItems  }) {
   return (
     <Container fluid className="grid">
       <Row>
         <Toolbar  toolbarButtonsLeft={toolbarButtonsLeft}
                   toolbarButtonsRight={toolbarButtonsRight}
+                  username={userDetails.username}
+                  status={userDetails.status}
+                  cartItems={cartItems}
         />
       </Row>
       <Row>

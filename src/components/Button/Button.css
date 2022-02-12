@@ -10,3 +10,11 @@
 .d-inline-block{
     display: inline-block;
 }
+
+.button-notification{
+    position: absolute;
+    /* background-color: white; */
+    top:-10px;
+    right:4px;
+
+}
