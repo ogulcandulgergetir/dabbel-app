@@ -5,10 +5,16 @@ import Button from '../Button/Button'
 import { Col } from 'react-bootstrap';
 
 
-function HomeButton({ md, index, toggleTodo }) {
+function HomeButton({ button }) {
   return (
     <div  className="home-button px-2">
-      <Button text="Home" icon="feather:home"/>      
+      <Button text={button.buttonText} 
+              icon={button.icon} 
+              chevronType={button.chevronType} 
+              notificationTextColor={button.notificationTextColor}
+              notificationBackgroundColor ={button.notificationBackgroundColor}
+              notificationText={button.notificationText}
+      />      
     </div>
   );
 }

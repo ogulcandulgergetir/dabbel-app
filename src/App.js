@@ -26,8 +26,7 @@ function App() {
     <Container fluid className="App">
       <Row className="h-100">
         <Sidebar/>
-        <Dashboard/>
-      
+        <Dashboard/>      
       </Row>
     </Container>
   );
