@@ -1,11 +1,13 @@
 
 .modal-dialog {
   position: absolute !important;
-  right:160px;
-  top:65px;
+  right:140px;
+  top:80px;
   margin: 0;
   margin-left: 1rem;
   color: rgb(182, 182, 182);
+  padding-bottom: 1rem;
+  
 }
 
 .modal-content {
@@ -14,11 +16,11 @@
 }
 
 .modal-header {
-  border-bottom: 2px solid rgb(65, 65, 65);
+  border-bottom: 2px solid rgba(83, 83, 83, 0.349);
 }
 
 .modal-body {
-  border-bottom: 2px solid rgb(65, 65, 65);
+  border-bottom: 2px solid rgba(83, 83, 83, 0.349);
   font-size: 15px;
 }
 
@@ -28,11 +30,40 @@
 
 }
 
+.plus-minus-snippet{
+  border-radius: 5px;
+  border: 1px solid rgb(82, 82, 82);
+  color: rgb(153, 153, 153);
+  width: 120px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  
+}
 
+.plus-minus-snippet button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-shadow: none;
+  outline: none;
+  width: 35px;
+  color: rgb(155, 155, 155);
+}
+
+.modal-footer {
+  border: none;
+}
+
+
+
+@media only screen and (min-width: 450px) {
+  .modal-dialog {
+    min-width: 400px;
+  }
+}
 
 @media only screen and (max-width: 575px) {
   .modal-dialog {
-    right:90px;
+    right:75px;
   }
 }
 
@@ -40,6 +71,6 @@
   .modal-dialog {
   position: unset !important;
   margin: 2rem;
-  margin-top: 70px;
+  margin-top: 80px;
   }
 }

@@ -5,12 +5,14 @@ import { Modal } from 'react-bootstrap';
 
 
 
-function CartModal(props) {
+function CartModal({show, onHide,cartItems, onDecrase, onIncrease, onRemove, totalAmount}) {
   return (
     <Modal
-      {...props}
+      show={show}
+      onHide={onHide}
       size="md"
       aria-labelledby="contained-modal-title-vcenter"
+      
       
     >
       <Modal.Header closeButton>
@@ -19,21 +21,31 @@ function CartModal(props) {
         </Modal.Title>
       </Modal.Header>
 
-      {props.cartItems.map((item) => {
-        return <Modal.Body>
-                  <div className="d-flex justify-content-between">
+      {cartItems.length > 0 ? cartItems.map((item, idx) => {
+        return <Modal.Body key={idx} scrollable="true">
+
+                  <div className="d-flex justify-content-between align-items-center">
                     <div className="">{item.name}
                     </div>
-                    <div className="d-flex">
-                      <div className="" style={{marginLeft: "6rem",marginRight: "3rem"}}>Title</div>
-                      <div className="" style={{marginRight: "1rem"}}>${item.price}</div>
-                      <div><span className="iconify" data-icon="fluent:delete-24-regular"></span></div>
+                    <div className="d-flex align-items-center">
+                      <div className="plus-minus-snippet text-center" style={{marginRight: "2rem"}}>
+                        <button onClick={() => onDecrase(idx)} style={{float: "left",borderRight: "1px solid rgba(83, 83, 83, 0.349)"}}><span className="iconify" data-icon="akar-icons:minus"></span></button>
+                        {item.count}
+                        <button onClick={() => onIncrease(idx)} style={{float: "right",borderLeft: "1px solid rgba(83, 83, 83, 0.349)"}}><span className="iconify" data-icon="akar-icons:plus"></span></button>
+                      </div>
+                      <div className="" style={{ width: "80px"}}>${Math.round(item.price*item.count*100)/100}</div>
+                      <div type="button" onClick={() => onRemove(idx)}><span className="iconify" data-icon="fluent:delete-24-regular" data-width="24" data-height="24" style={{paddingBottom: "6px"}}></span></div>
                     </div>
                   </div>
               </Modal.Body>
-      })}      
+      }) :
+      <div className="p-3">Your cart is empty</div>
+      }      
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <div className="d-flex justify-content-between w-100">
+          <div>Total:</div>
+          <div>${totalAmount}</div>
+        </div>
       </Modal.Footer>
     </Modal>
   );

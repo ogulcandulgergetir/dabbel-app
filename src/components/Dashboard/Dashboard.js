@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 
 
-function Dashboard( {cartItems}) {
+function Dashboard( {cartItems, onDecrease, onIncrease, onRemove}) {
 
   const toolbarButtonsLeft = [
     {
@@ -60,7 +60,11 @@ function Dashboard( {cartItems}) {
           <Grid toolbarButtonsLeft={toolbarButtonsLeft}
                 toolbarButtonsRight={toolbarButtonsRight}
                 userDetails={userDetails}
-                cartItems={cartItems}/>
+                cartItems={cartItems}
+                onDecrease={onDecrease}
+                onIncrease={onIncrease}
+                onRemove={onRemove}/>
+
         </Row>
       </Container>
     </Col>

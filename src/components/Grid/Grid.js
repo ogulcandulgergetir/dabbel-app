@@ -6,7 +6,7 @@ import Toolbar from '../Toolbar/Toolbar'
 
 
 
-function Grid({ toolbarButtonsRight, toolbarButtonsLeft, userDetails, cartItems  }) {
+function Grid({ toolbarButtonsRight, toolbarButtonsLeft, userDetails, cartItems, onDecrease, onIncrease, onRemove  }) {
 
   const gridElements = {
     gridElement1: {
@@ -30,6 +30,9 @@ function Grid({ toolbarButtonsRight, toolbarButtonsLeft, userDetails, cartItems 
                   username={userDetails.username}
                   status={userDetails.status}
                   cartItems={cartItems}
+                  onDecrease={onDecrease}
+                  onIncrease={onIncrease}
+                  onRemove={onRemove}
         />
       </Row>
       <Row>

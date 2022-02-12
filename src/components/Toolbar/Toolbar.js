@@ -6,9 +6,17 @@ import { Col } from 'react-bootstrap';
 
 
 
-function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, cartItems }) {
+function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, cartItems, onDecrease, onIncrease, onRemove }) {
 
-  const [modalShow, setModalShow] = React.useState(true);
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const getTotal = () => {
+    let sum = 0;
+    cartItems.map((item) => {
+      sum += item.price*item.count
+    })
+    return Math.round(sum*100)/100
+  }
 
   return (
     <Col className="grid-element" >
@@ -44,6 +52,10 @@ function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, ca
         show={modalShow}
         onHide={() => setModalShow(false)}
         cartItems={cartItems}
+        onDecrase={onDecrease}
+        onIncrease={onIncrease}
+        onRemove={onRemove}
+        totalAmount={getTotal()}
       />
      </div>
     </Col>
