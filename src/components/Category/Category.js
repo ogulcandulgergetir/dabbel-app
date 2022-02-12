@@ -6,7 +6,6 @@ import { Col } from 'react-bootstrap';
 
 
 function Category({ title, categoryButtons, toggleTodo }) {
-  console.log(categoryButtons)
   return (
     <div  className="category mt-4 p-2">
       <h2>{title}</h2>
