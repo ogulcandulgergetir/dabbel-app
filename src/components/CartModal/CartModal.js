@@ -9,23 +9,29 @@ function CartModal(props) {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
-      centered
+      
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          My Cart
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
+
+      {props.cartItems.map((item) => {
+        return <Modal.Body>
+                  <div className="d-flex justify-content-between">
+                    <div className="">{item.name}
+                    </div>
+                    <div className="d-flex">
+                      <div className="" style={{marginLeft: "6rem",marginRight: "3rem"}}>Title</div>
+                      <div className="" style={{marginRight: "1rem"}}>${item.price}</div>
+                      <div><span className="iconify" data-icon="fluent:delete-24-regular"></span></div>
+                    </div>
+                  </div>
+              </Modal.Body>
+      })}      
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>

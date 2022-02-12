@@ -8,7 +8,7 @@ import { Col } from 'react-bootstrap';
 
 function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, cartItems }) {
 
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = React.useState(true);
 
   return (
     <Col className="grid-element" >
@@ -43,6 +43,7 @@ function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, ca
       <CartModal
         show={modalShow}
         onHide={() => setModalShow(false)}
+        cartItems={cartItems}
       />
      </div>
     </Col>
