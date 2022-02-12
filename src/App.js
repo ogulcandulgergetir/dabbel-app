@@ -6,11 +6,9 @@ import { Container, Row } from 'react-bootstrap';
 import axios from "axios";
 
 
-
 function App() {
 
-  const [items, setItems] = useState([
-  ]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetchItem();    
@@ -33,9 +31,19 @@ function App() {
     setItems(newItems);
   };
 
-  // const removeItem = index => {
+  // const increaseItemAmount = item => {
+  //   const newItems = [...items,  ...item ];
+  //   setItems(newItems);
+  // };
+
+  // const increaseItemAmount = item => {
+  //   const newItems = [...items,  ...item ];
+  //   setItems(newItems);
+  // };
+
+  // const removeItem = itemIndex => {
   //   const newTodos = [...todos];
-  //   newTodos.splice(index, 1);
+  //   newTodos.splice(itemIndex, 1);
   //   setTodos(newTodos);
   // };
 
