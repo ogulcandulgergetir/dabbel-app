@@ -32,7 +32,7 @@ function CartModal({show, onHide,cartItems, onDecrase, onIncrease, onRemove, tot
                         {item.count}
                         <button onClick={() => onIncrease(idx)} style={{float: "right",borderLeft: "1px solid rgba(83, 83, 83, 0.349)"}}><span className="iconify" data-icon="akar-icons:plus"></span></button>
                       </div>
-                      <div className="" style={{ width: "80px"}}>${Math.round(item.price*item.count*100)/100}</div>
+                      <div className="" style={{ width: "70px"}}>${Math.round(item.price*item.count*100)/100}</div>
                       <div type="button" onClick={() => onRemove(idx)}><span className="iconify" data-icon="fluent:delete-24-regular" data-width="24" data-height="24" style={{paddingBottom: "6px"}}></span></div>
                     </div>
                   </div>

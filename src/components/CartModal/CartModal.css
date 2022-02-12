@@ -34,7 +34,7 @@
   border-radius: 5px;
   border: 1px solid rgb(82, 82, 82);
   color: rgb(153, 153, 153);
-  width: 120px;
+  width: 100px;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   
@@ -45,7 +45,7 @@
   border: none;
   text-shadow: none;
   outline: none;
-  width: 35px;
+  width: 30px;
   color: rgb(155, 155, 155);
 }
 
