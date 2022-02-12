@@ -2,9 +2,6 @@ import React from "react";
 import "./Category.css";
 import Button from '../Button/Button'
 
-import { Col } from 'react-bootstrap';
-
-
 function Category({ title, categoryButtons }) {
   return (
     <div  className="category mt-4 p-2">

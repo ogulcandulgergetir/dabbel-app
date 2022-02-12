@@ -1,6 +1,5 @@
 import React from "react";
 import "./CircleNotification.css";
-import { Col } from 'react-bootstrap';
 
 
 function CircleNotification({ backgroundColor, textColor, text }) {

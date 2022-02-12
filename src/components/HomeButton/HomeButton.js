@@ -2,8 +2,6 @@ import React from "react";
 import "./HomeButton.css";
 import Button from '../Button/Button'
 
-import { Col } from 'react-bootstrap';
-
 
 function HomeButton({ button }) {
   return (

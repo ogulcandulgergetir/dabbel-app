@@ -1,6 +1,5 @@
 import React from "react";
 import "./Dashboard.css";
-import Toolbar from '../Toolbar/Toolbar'
 import Grid from '../Grid/Grid'
 import { Container, Row, Col } from 'react-bootstrap';
 

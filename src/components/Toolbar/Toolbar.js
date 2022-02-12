@@ -12,9 +12,9 @@ function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, ca
 
   const getTotal = () => {
     let sum = 0;
-    cartItems.map((item) => {
+    cartItems.map((item) => (
       sum += item.price*item.count
-    })
+    ))
     return Math.round(sum*100)/100
   }
 

@@ -1,6 +1,5 @@
 import React from "react";
 import "./CartModal.css";
-import Button from '../Button/Button'
 import { Modal } from 'react-bootstrap';
 
 
