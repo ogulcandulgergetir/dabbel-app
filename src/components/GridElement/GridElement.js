@@ -1,13 +1,17 @@
 import React from "react";
 import "./GridElement.css";
 import { Container, Row, Col } from 'react-bootstrap';
+import GridElementTitle from '../GridElementTitle/GridElementTitle'
+import GridElementBody from '../GridElementBody/GridElementBody'
 
 
-function GridElement({ text, md, sm, lg, xs }) {
+
+function GridElement({ text, md, sm, lg, xs, title, updatedDate ,textCenter  }) {
   return (
     <Col lg={lg} md={md} xs={xs} sm={sm} lg={lg} className="grid-element" >
-     <div className="grid-content h-100">
-      {text}sss{md}
+     <div className={`grid-content h-100 ${textCenter}`}>
+      <GridElementTitle title={title} updatedDate={updatedDate}/>
+      <GridElementBody text={text}/>
      </div>
     </Col>
   );

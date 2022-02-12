@@ -1,12 +1,9 @@
-.todo {
-    align-items: center;
-    background: #fff;
-    /* background: rgb(224, 214, 231); */
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-    display: flex;
-    font-size: 12px;
-    justify-content: space-between;
-    margin-bottom: 6px;
-    padding: 3px 10px;
-  }
+.grid-element-title{
+  color: rgb(226, 226, 226)
+}
+
+.grid-element-title .date {
+  font-size: 11px;
+  padding-top: 0.25rem;
+  color: rgb(192, 192, 192);
+}

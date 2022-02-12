@@ -1,22 +1,15 @@
 import React from "react";
-import "./Todo.css";
+import "./GridElementTitle.css";
 
-function Todo({ todo, index, toggleTodo }) {
+function GridElementTitle({ title, updatedDate }) {
   return (
-    <div
-      className="todo"
-      style={{ backgroundColor: todo.completed ? "rgb(143, 143, 143)" : "rgb(224, 214, 231)",
-               color: todo.completed ? "rgb(90, 90, 90)" : "" }}
-    >
-      {todo.title}
-      <div>
-      {!todo.completed 
-        ? <button onClick={() => toggleTodo(index)}>Complete The Task</button>
-        : <button onClick={() => toggleTodo(index)}>Uncomplete</button>
+    <div className="grid-element-title d-flex justify-content-between">
+      <span>{title}</span>
+      {updatedDate &&
+        <span className="date">{updatedDate}</span>  
       }
-      </div>
     </div>
   );
 }
 
-export default Todo;
+export default GridElementTitle;

@@ -51,7 +51,7 @@ function Dashboard( {cartItems}) {
   const userDetails = {
       username: "Username",
       status: "admin",
-    }
+  }
 
   return (
     <Col className="dashboard">

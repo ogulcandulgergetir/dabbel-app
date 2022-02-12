@@ -7,6 +7,21 @@ import Toolbar from '../Toolbar/Toolbar'
 
 
 function Grid({ toolbarButtonsRight, toolbarButtonsLeft, userDetails, cartItems  }) {
+
+  const gridElements = {
+    gridElement1: {
+      title: "Title",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    },
+    gridElement2: {
+      title: "Title",
+      updatedDate: "Updated N month(s) ago"
+    },
+    gridElementCenter: {
+      title: "I am a text centered!",
+    },
+  }
+
   return (
     <Container fluid className="grid">
       <Row>
@@ -18,8 +33,8 @@ function Grid({ toolbarButtonsRight, toolbarButtonsLeft, userDetails, cartItems 
         />
       </Row>
       <Row>
-        <GridElement sm="6" md="4" lg="4"/>
-        <GridElement sm="6" md="8" lg="8"/>
+        <GridElement sm="6" md="4" lg="4" title={gridElements.gridElement1.title} text={gridElements.gridElement1.text}/>
+        <GridElement sm="6" md="8" lg="8" title={gridElements.gridElement2.title} text={gridElements.gridElement2.text} updatedDate={gridElements.gridElement2.updatedDate}/>
       </Row>
       <Row>
         <Col className="col-12 col-md-4 p-0">
@@ -31,7 +46,7 @@ function Grid({ toolbarButtonsRight, toolbarButtonsLeft, userDetails, cartItems 
             </Row>
           </Container>
         </Col>
-        <GridElement md={8} text="uzun"/>
+        <GridElement textCenter="d-flex align-items-center justify-content-center" title={gridElements.gridElementCenter.title} md="8"/>
       </Row>
       <Row>
         <GridElement sm="6" md="6"/>
