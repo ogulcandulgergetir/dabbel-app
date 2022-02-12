@@ -6,11 +6,13 @@ import Toolbar from '../Toolbar/Toolbar'
 
 
 
-function Grid({ margin, index, toggleTodo }) {
+function Grid({ toolbarButtonsRight, toolbarButtonsLeft }) {
   return (
     <Container fluid className="grid">
       <Row>
-        <GridElement md="12"/>
+        <Toolbar  toolbarButtonsLeft={toolbarButtonsLeft}
+                  toolbarButtonsRight={toolbarButtonsRight}
+        />
       </Row>
       <Row>
         <GridElement sm="6" md="4" lg="4"/>

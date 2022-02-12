@@ -2,9 +2,6 @@ import React from "react";
 import "./Sidebar.css";
 import HomeButton from '../HomeButton/HomeButton'
 import Category from '../Category/Category'
-import { Col } from 'react-bootstrap';
-
-
 
 
 function Sidebar({ md, index, toggleTodo }) {
