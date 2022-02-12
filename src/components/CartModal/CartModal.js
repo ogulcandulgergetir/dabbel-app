@@ -28,7 +28,7 @@ function CartModal({show, onHide,cartItems, onDecrase, onIncrease, onRemove, tot
                     <div className="">{item.name}
                     </div>
                     <div className="d-flex align-items-center">
-                      <div className="plus-minus-snippet text-center" style={{marginRight: "2rem"}}>
+                      <div className="plus-minus-snippet text-center" style={{marginRight: "1rem"}}>
                         <button onClick={() => onDecrase(idx)} style={{float: "left",borderRight: "1px solid rgba(83, 83, 83, 0.349)"}}><span className="iconify" data-icon="akar-icons:minus"></span></button>
                         {item.count}
                         <button onClick={() => onIncrease(idx)} style={{float: "right",borderLeft: "1px solid rgba(83, 83, 83, 0.349)"}}><span className="iconify" data-icon="akar-icons:plus"></span></button>
