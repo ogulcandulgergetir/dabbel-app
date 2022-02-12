@@ -6,7 +6,7 @@ import { Col } from 'react-bootstrap';
 
 
 
-function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, cartItems, onDecrease, onIncrease, onRemove }) {
+function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, cartItems, onDecrease, onIncrease, onRemove, onCheckout }) {
 
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -56,6 +56,7 @@ function Toolbar({ toolbarButtonsLeft, toolbarButtonsRight, username, status, ca
         onIncrease={onIncrease}
         onRemove={onRemove}
         totalAmount={getTotal()}
+        onCheckout={onCheckout}
       />
      </div>
     </Col>

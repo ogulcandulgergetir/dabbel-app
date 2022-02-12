@@ -1,5 +1,5 @@
 
-.modal-dialog {
+.cart-modal .modal-dialog {
   position: absolute !important;
   right:140px;
   top:80px;
@@ -10,27 +10,27 @@
   
 }
 
-.modal-content {
+.cart-modal .modal-content {
   background-color: #283046;
   
 }
 
-.modal-header {
+.cart-modal .modal-header {
   border-bottom: 2px solid rgba(83, 83, 83, 0.349);
 }
 
-.modal-body {
+.cart-modal .modal-body {
   border-bottom: 2px solid rgba(83, 83, 83, 0.349);
   font-size: 15px;
 }
 
-.modal-body h5 {
+.cart-modal .modal-body h5 {
   margin: 0;
   font-size: 15px;
 
 }
 
-.plus-minus-snippet{
+.cart-modal .plus-minus-snippet{
   border-radius: 5px;
   border: 1px solid rgb(82, 82, 82);
   color: rgb(153, 153, 153);
@@ -40,7 +40,7 @@
   
 }
 
-.plus-minus-snippet button {
+.cart-modal .plus-minus-snippet button {
   background-color: rgba(255, 255, 255, 0);
   border: none;
   text-shadow: none;
@@ -49,26 +49,36 @@
   color: rgb(155, 155, 155);
 }
 
-.modal-footer {
+.cart-modal .modal-footer {
   border: none;
+}
+
+.cart-modal .modal-footer button{
+  border-radius: 5px;
+  border: none;
+  background-color: #7367f0;
+  outline: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: white;
 }
 
 
 
 @media only screen and (min-width: 450px) {
-  .modal-dialog {
+  .cart-modal .modal-dialog {
     min-width: 400px;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  .modal-dialog {
+  .cart-modal .modal-dialog {
     right:75px;
   }
 }
 
 @media only screen and (max-width: 440px) {
-  .modal-dialog {
+  .cart-modal .modal-dialog {
   position: unset !important;
   margin: 2rem;
   margin-top: 80px;

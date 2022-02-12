@@ -1,0 +1,12 @@
+.checkout-modal .modal-content{
+  background-color: #7367f0;
+  color: white;
+}
+
+.modal-header {
+  border-bottom: 2px solid rgba(224, 224, 224, 0.418) ;
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}

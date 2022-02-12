@@ -5,14 +5,14 @@ import { Modal } from 'react-bootstrap';
 
 
 
-function CartModal({show, onHide,cartItems, onDecrase, onIncrease, onRemove, totalAmount}) {
+function CartModal({show, onHide,cartItems, onDecrase, onIncrease, onRemove, totalAmount, onCheckout}) {
   return (
     <Modal
       show={show}
       onHide={onHide}
       size="md"
       aria-labelledby="contained-modal-title-vcenter"
-      
+      className="cart-modal"
       
     >
       <Modal.Header closeButton>
@@ -44,7 +44,10 @@ function CartModal({show, onHide,cartItems, onDecrase, onIncrease, onRemove, tot
       <Modal.Footer>
         <div className="d-flex justify-content-between w-100">
           <div>Total:</div>
-          <div>${totalAmount}</div>
+          <div><strong>${totalAmount}</strong></div>
+        </div>
+        <div className="d-flex justify-content-between w-100">
+          <button onClick={()=> {onCheckout();onHide()}} className="w-100">Checkout</button>
         </div>
       </Modal.Footer>
     </Modal>

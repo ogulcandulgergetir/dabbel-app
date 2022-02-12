@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 
 
-function Dashboard( {cartItems, onDecrease, onIncrease, onRemove}) {
+function Dashboard( {cartItems, onDecrease, onIncrease, onRemove, onCheckout}) {
 
   const toolbarButtonsLeft = [
     {
@@ -63,7 +63,9 @@ function Dashboard( {cartItems, onDecrease, onIncrease, onRemove}) {
                 cartItems={cartItems}
                 onDecrease={onDecrease}
                 onIncrease={onIncrease}
-                onRemove={onRemove}/>
+                onRemove={onRemove}
+                onCheckout={onCheckout}
+                />
 
         </Row>
       </Container>
